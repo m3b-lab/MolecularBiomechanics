@@ -9,10 +9,8 @@ Prof. **Marco A. Deriu**
 
 ## Instructors
 - Marco A. Deriu
-- Lorenzo Pallante
 - Eric A. Zizzi
 - Marcello Miceli
-- Marco Cannariato
 
 ## Schedule
 
