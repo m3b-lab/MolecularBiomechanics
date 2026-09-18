@@ -23,7 +23,7 @@ Import the course VM into VirtualBox, give it a sensible share of your computer'
 
 `01-LinuxBash/`
 
-Working in the Linux shell: navigating the file system, handling files, `grep`/`awk`/`sed`, loops and scripts, monitoring and backgrounding long jobs with `top`, `htop` and `nohup`. All exercises use CLN025 structures and a small set of PDB entries. You will write the skeleton of a `setup.sh` script that LAB 3 completes, and extract statistics from PDB files with the command line.
+Working in the Linux shell: navigating the file system, handling files, `grep`/`awk`/`sed`, loops and scripts, monitoring and backgrounding long jobs with `top`, `&` and `nohup`. All exercises use CLN025 structures and a small set of PDB entries. You will write the skeleton of a `setup.sh` script that LAB 3 completes, and extract statistics from PDB files with the command line.
 
 ### LAB 2 - VMD and the PDB Format
 
