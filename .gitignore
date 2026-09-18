@@ -1,6 +1,17 @@
+# OS / editor junk (RH-01)
+.DS_Store
+\#*#
+*.bck
+.ipynb_checkpoints/
 
-.DS_Store
-.DS_Store
-LAB/.DS_Store
-.DS_Store
-LAB/.DS_Store
+# Simulation output never goes in the repo; reference data comes from course-fetch (RH-02)
+*.xtc
+*.trr
+*.edr
+*.log
+*.cpt
+
+# AI agent material stays local
+CLAUDE.md
+.claude/
+docs/PRD-chignolin-refresh.md
