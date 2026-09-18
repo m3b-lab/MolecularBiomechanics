@@ -1,6 +1,5 @@
-
+# OS / editor junk (RH-01)
 .DS_Store
-.DS_Store
-LAB/.DS_Store
-.DS_Store
-LAB/.DS_Store
+\#*#
+*.bck
+.ipynb_checkpoints/
