@@ -1,0 +1,44 @@
+; Production MD at 300 K and 1 bar, no restraints
+; Course standard: amber99sb-ildn + TIP3P, dt = 2 fs, h-bond constraints, no HMR
+; Each lab sets nsteps from the run length it needs and your measured ns/day.
+
+integrator      = md
+dt              = 0.002     ; 2 fs
+nsteps          = 500000    ; 1 ns
+
+; Output
+nstxout-compressed = 5000   ; every 10 ps
+nstenergy       = 5000
+nstlog          = 5000
+
+; Bonds
+continuation    = yes       ; continues from the NPT stage
+constraints     = h-bonds
+constraint-algorithm = lincs
+lincs-iter      = 1
+lincs-order     = 4
+
+; Neighbour searching and interactions
+cutoff-scheme   = Verlet
+nstlist         = 10
+pbc             = xyz
+coulombtype     = PME
+rcoulomb        = 1.0
+vdwtype         = Cut-off
+rvdw            = 1.0
+DispCorr        = EnerPres
+
+; Temperature coupling
+tcoupl          = v-rescale
+tc-grps         = System
+tau-t           = 0.1
+ref-t           = 300
+
+; Pressure coupling
+pcoupl          = C-rescale
+pcoupltype      = isotropic
+tau-p           = 2.0
+ref-p           = 1.0
+compressibility = 4.5e-5
+
+gen-vel         = no

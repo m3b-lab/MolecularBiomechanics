@@ -68,7 +68,7 @@ This way every lab can be analysed on the same data, even if your own runs did n
 
 ## Other folders
 
-- `common/mdp/` holds the single copy of every GROMACS parameter file used in the labs.
+- `common/` holds what several labs share: the CLN025 structures (`structures/`), the single copy of every GROMACS parameter file (`mdp/`) and helper scripts (`scripts/`). See `common/README.md`.
 - `Additional_Material/` holds optional material: `python-intro/` and `probability/` (the former introductory labs), `linux-bash/` (extra Linux and bash tutorials) and `amyloid-2BEG/` (the former steered-MD lab on the amyloid fibril 2BEG).
 
 For a second walkthrough of a complete GROMACS run on a different protein, see the official [GROMACS introductory MD tutorial](https://gitlab.com/gromacs/online-tutorials/md-intro-tutorial).
