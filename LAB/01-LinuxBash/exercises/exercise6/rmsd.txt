@@ -1,0 +1,21 @@
+frame  1  RMSD 0.775 A
+frame  2  RMSD 0.424 A
+frame  3  RMSD 0.374 A
+frame  4  RMSD 0.387 A
+frame  5  RMSD 0.304 A
+frame  6  RMSD 0.319 A
+frame  7  RMSD 0.329 A
+frame  8  RMSD 0.596 A
+frame  9  RMSD 0.436 A
+frame 10  RMSD 0.268 A
+frame 11  RMSD 0.464 A
+frame 12  RMSD 0.229 A
+frame 13  RMSD 0.601 A
+frame 14  RMSD 0.773 A
+frame 15  RMSD 0.416 A
+frame 16  RMSD 0.558 A
+frame 17  RMSD 0.505 A
+frame 18  RMSD 0.608 A
+frame 19  RMSD 0.287 A
+frame 20  RMSD 0.775 A
+mean      RMSD 0.471 A
