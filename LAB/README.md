@@ -70,3 +70,5 @@ This way every lab can be analysed on the same data, even if your own runs did n
 
 - `common/mdp/` holds the single copy of every GROMACS parameter file used in the labs.
 - `Additional_Material/` holds optional material, including the former introductory labs on Python and probability and the former steered-MD lab on the amyloid fibril 2BEG.
+
+For a second walkthrough of a complete GROMACS run on a different protein, see the official [GROMACS introductory MD tutorial](https://gitlab.com/gromacs/online-tutorials/md-intro-tutorial).

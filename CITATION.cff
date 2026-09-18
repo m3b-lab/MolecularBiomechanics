@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this material, please cite it as below."
+title: "Biomeccanica Multiscala: Molecular Biomechanics practical labs"
+abstract: >-
+  Practical molecular dynamics labs of the Biomeccanica Multiscala course at
+  Politecnico di Torino, built around the mini-protein CLN025 (chignolin).
+authors:
+  - family-names: Deriu
+    given-names: Marco A.
+    affiliation: Politecnico di Torino
+  - family-names: Zizzi
+    given-names: Eric A.
+    affiliation: Politecnico di Torino
+  - family-names: Miceli
+    given-names: Marcello
+    affiliation: Politecnico di Torino
+repository-code: "https://github.com/m3b-lab/MolecularBiomechanics"
+url: "https://m3b.it/"
+license: CC-BY-NC-SA-4.0
+keywords:
+  - molecular dynamics
+  - GROMACS
+  - biomechanics
+  - chignolin
+  - teaching
