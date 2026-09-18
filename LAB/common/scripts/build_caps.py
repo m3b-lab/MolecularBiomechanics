@@ -11,10 +11,28 @@ Usage:
     python build_caps.py 2RVD.pdb MODEL OUTPUT.pdb [--gromos]
 
 --gromos names the acetyl methyl CA (GROMOS naming) instead of CH3 (AMBER).
+
+Plain Python, no extra packages: runs with the python3 of any terminal.
 """
 import argparse
+import math
 
-import numpy as np
+
+def sub(a, b):
+    return [a[0] - b[0], a[1] - b[1], a[2] - b[2]]
+
+
+def dot(a, b):
+    return a[0] * b[0] + a[1] * b[1] + a[2] * b[2]
+
+
+def cross(a, b):
+    return [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]]
+
+
+def unit(a):
+    n = math.sqrt(dot(a, a))
+    return [a[0] / n, a[1] / n, a[2] / n]
 
 
 def read_model(path, model):
@@ -27,7 +45,7 @@ def read_model(path, model):
             break
         elif inside and line.startswith("ATOM") and line[76:78].strip() != "H":
             atoms.append((line[12:16].strip(), line[17:20], int(line[22:26]),
-                          np.array([float(line[30:38]), float(line[38:46]), float(line[46:54])])))
+                          [float(line[30:38]), float(line[38:46]), float(line[46:54])]))
     if not atoms:
         raise SystemExit(f"model {model} not found in {path}")
     return atoms
@@ -35,19 +53,20 @@ def read_model(path, model):
 
 def place(a, b, c, bond, angle, torsion):
     """Point d with |cd| = bond, angle bcd = angle and dihedral abcd = torsion (degrees)."""
-    angle, torsion = np.radians(angle), np.radians(torsion)
-    bc = (c - b) / np.linalg.norm(c - b)
-    n = np.cross(b - a, bc)
-    n /= np.linalg.norm(n)
-    m = np.cross(n, bc)
-    return c + bond * (-np.cos(angle) * bc + np.sin(angle) * (np.cos(torsion) * m + np.sin(torsion) * n))
+    angle, torsion = math.radians(angle), math.radians(torsion)
+    bc = unit(sub(c, b))
+    n = unit(cross(sub(b, a), bc))
+    m = cross(n, bc)
+    x, y, z = -math.cos(angle), math.sin(angle) * math.cos(torsion), math.sin(angle) * math.sin(torsion)
+    return [c[k] + bond * (x * bc[k] + y * m[k] + z * n[k]) for k in range(3)]
 
 
 def dihedral(a, b, c, d):
-    b1 = (c - b) / np.linalg.norm(c - b)
-    v = (a - b) - np.dot(a - b, b1) * b1
-    w = (d - c) - np.dot(d - c, b1) * b1
-    return np.degrees(np.arctan2(np.dot(np.cross(b1, v), w), np.dot(v, w)))
+    b1 = unit(sub(c, b))
+    ab, dc = sub(a, b), sub(d, c)
+    v = [ab[k] - dot(ab, b1) * b1[k] for k in range(3)]
+    w = [dc[k] - dot(dc, b1) * b1[k] for k in range(3)]
+    return math.degrees(math.atan2(dot(cross(b1, v), w), dot(v, w)))
 
 
 def main():
