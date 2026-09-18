@@ -3,3 +3,8 @@
 \#*#
 *.bck
 .ipynb_checkpoints/
+
+# AI agent material stays local
+CLAUDE.md
+.claude/
+docs/PRD-chignolin-refresh.md
