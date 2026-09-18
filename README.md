@@ -12,16 +12,16 @@ Prof. **Marco A. Deriu**
 - Eric A. Zizzi
 - Marcello Miceli
 
-## Schedule
+## Labs
 
-Title  | Topic                   | Materials |
--------|-------------------------|-----------|
-LAB 0  | System Setup           	|   [![SystemSetup](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/00-SystemSetup/00-SystemSetup.ipynb)	|
-LAB 1  | Intro Colab&Python          	|   [![Python](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/01-Intro_ColabPython/01-Intro_ColabPython.ipynb)	|
-LAB 2  | Exercises on probability  |   [![Probability](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/02-Probability/02-Probability_Combinatorics.ipynb)|
-LAB 3  | Intro Linux&Bash       	|   	[![LinuxBash](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/03-Intro_BashLinux/03-Intro_LinuxBash.ipynb)|
-LAB 4  | Bash Scripting          	|   	[![BashScripting](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/04-BashScripting/04-BashScripting.ipynb)|
-LAB 5  | Visualisation Tools          	|   	[![Visualization](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/05-VisualizationAnalysis/05-VisualizationAnalysis.ipynb)|
-LAB 6  | GROMACS - Classical MD         	|   [![Gromacs](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/06-Gromacs/06-Gromacs.ipynb)|	|
-LAB 7  | Enhanced Sampling - Simulated Annealing         	| [![Gromacs](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/07-SimulatedAnnealing/Annealing.ipynb)  	|
-LAB 8  | Enhanced Sampling - Steered MD 	|  [![Gromacs](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/08-SMD/08-SteeredMD.ipynb) 	|
+All labs run inside the course virtual machine and work on a single molecule, CLN025 (chignolin). See [LAB/README.md](LAB/README.md) for what each lab covers.
+
+| Lab   | Topic                        |
+|-------|------------------------------|
+| LAB 0 | VM setup and benchmark       |
+| LAB 1 | Linux, bash and the terminal |
+| LAB 2 | VMD and the PDB format       |
+| LAB 3 | Classical MD                 |
+| LAB 4 | MD analysis                  |
+| LAB 5 | Simulated annealing          |
+| LAB 6 | Steered MD                   |
