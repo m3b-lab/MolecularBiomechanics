@@ -1,6 +1,6 @@
 # Overview
 
-These are the practical labs of the Biomeccanica Multiscala course. Every lab from LAB 1 onward works on the same molecule: **CLN025**, a 10-residue variant of chignolin (sequence YYDPETGTWY) that folds into a β-hairpin. It is the smallest system that behaves like a protein rather than a peptide, which makes it a good place to ask what holds a fold together and what it takes to pull it apart. The reference structure is **PDB 2RVD**.
+These are the practical labs of the Molecular Biomechanics course. Every lab from LAB 1 onward works on the same molecule: **CLN025**, a 10-residue variant of chignolin (sequence YYDPETGTWY) that folds into a β-hairpin. It is the smallest system that behaves like a protein rather than a peptide, which makes it a good place to ask what holds a fold together and what it takes to pull it apart. The reference structure is **PDB 2RVD**.
 
 All labs run inside the course virtual machine, which ships GROMACS, VMD, Python and the helper commands used below. Nothing has to be installed on your own machine apart from the virtualization software needed to import the VM (see LAB 0).
 
@@ -69,6 +69,6 @@ This way every lab can be analysed on the same data, even if your own runs did n
 ## Other folders
 
 - `common/mdp/` holds the single copy of every GROMACS parameter file used in the labs.
-- `Additional_Material/` holds optional material, including the former introductory labs on Python and probability and the former steered-MD lab on the amyloid fibril 2BEG.
+- `Additional_Material/` holds optional material: `python-intro/` and `probability/` (the former introductory labs), `linux-bash/` (extra Linux and bash tutorials) and `amyloid-2BEG/` (the former steered-MD lab on the amyloid fibril 2BEG).
 
 For a second walkthrough of a complete GROMACS run on a different protein, see the official [GROMACS introductory MD tutorial](https://gitlab.com/gromacs/online-tutorials/md-intro-tutorial).

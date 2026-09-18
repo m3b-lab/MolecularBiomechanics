@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this material, please cite it as below."
-title: "Biomeccanica Multiscala: Molecular Biomechanics practical labs"
+title: "Molecular Biomechanics: practical MD labs"
 abstract: >-
-  Practical molecular dynamics labs of the Biomeccanica Multiscala course at
+  Practical molecular dynamics labs of the Molecular Biomechanics course at
   Politecnico di Torino, built around the mini-protein CLN025 (chignolin).
 authors:
   - family-names: Deriu
