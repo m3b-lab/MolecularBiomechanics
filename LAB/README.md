@@ -17,7 +17,7 @@ LAB 6 closes the loop: its free-energy profile from pulling is compared against 
 
 `00-VMSetup/`
 
-Import the course VM, check that everything works, and run the benchmark shipped inside the image. Write down **your own ns/day**: every later lab sizes its simulations against that number.
+Import the course VM into VirtualBox, give it a sensible share of your computer's resources, and check that everything works. You will also measure how fast GROMACS runs on your computer (**your own ns/day**): every later lab sizes its simulations against that number.
 
 ### LAB 1 - Linux, Bash and the Terminal
 
