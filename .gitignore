@@ -10,6 +10,7 @@
 *.edr
 *.log
 *.cpt
+*.tpr
 
 # AI agent material stays local
 CLAUDE.md
