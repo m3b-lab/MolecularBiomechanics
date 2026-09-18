@@ -25,3 +25,7 @@ All labs run inside the course virtual machine and work on a single molecule, CL
 | LAB 4 | MD analysis                  |
 | LAB 5 | Simulated annealing          |
 | LAB 6 | Steered MD                   |
+
+## License
+
+The course material is licensed under [CC BY-NC-SA 4.0](LICENSE): you may share and adapt it for non-commercial purposes, with attribution, as long as you distribute your version under the same license. Third-party documents included for convenience keep their own licenses. To cite the material, see [CITATION.cff](CITATION.cff).
