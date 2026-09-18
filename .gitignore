@@ -3,6 +3,7 @@
 \#*#
 *.bck
 .ipynb_checkpoints/
+.vscode/
 
 # Simulation output never goes in the repo; reference data comes from course-fetch (RH-02)
 *.xtc
