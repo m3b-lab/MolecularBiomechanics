@@ -17,3 +17,10 @@
 CLAUDE.md
 .claude/
 docs/PRD-chignolin-refresh.md
+
+# Python bytecode
+__pycache__/
+
+
+# Additional material stays local:
+Esercizio_pratico_Corso_meccanica_delle_Biomolecole.pdf

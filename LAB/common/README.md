@@ -58,3 +58,4 @@ All four use a 2 fs time step with bonds to hydrogen constrained, PME electrosta
 | File | Use |
 |---|---|
 | `build_caps.py` | Caps one 2RVD model as ACE-YYDPETGTWY-NH2 (see above) |
+| `cln025.py` | The course's fixed definitions for the state of the hairpin, used unchanged in LABs 4, 5 and 6: backbone RMSD from NMR model 1, fraction of native contacts Q, Tyr1–Tyr10 end-to-end distance, and what counts as folded (Q ≥ 0.7 and RMSD < 0.15 nm). Import it from a notebook with `sys.path.append("../common/scripts")`; it needs the Python of the notebooks (MDTraj), not the terminal's `python3` |
