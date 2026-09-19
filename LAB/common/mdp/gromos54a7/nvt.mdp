@@ -1,0 +1,48 @@
+; NVT equilibration, 100 ps at 300 K, protein heavy atoms restrained
+; gromos54a7 + SPC: dt = 2 fs, h-bond constraints, reaction field, 1.4 nm cut-offs
+
+define          = -DPOSRES  ; position restraints from posre.itp
+integrator      = md
+dt              = 0.002     ; 2 fs
+nsteps          = 50000     ; 100 ps
+
+; Output
+nstxout-compressed = 5000   ; every 10 ps
+nstenergy       = 500
+nstlog          = 500
+
+; Bonds
+continuation    = no        ; first dynamics stage after minimisation
+constraints     = h-bonds
+constraint-algorithm = lincs
+lincs-iter      = 1
+lincs-order     = 4
+
+; Neighbour searching and interactions: GROMOS 54A7 settings
+; GROMOS was parametrized with reaction-field electrostatics and a 1.4 nm
+; cut-off (Diem & Oostenbrink, JCTC 2020, doi:10.1021/acs.jctc.0c00509).
+; A single 1.4 nm Verlet cut-off reproduces the original twin-range scheme
+; (Silva et al., JCTC 2018, doi:10.1021/acs.jctc.8b00758).
+cutoff-scheme   = Verlet
+nstlist         = 10
+pbc             = xyz
+coulombtype     = Reaction-Field
+rcoulomb        = 1.4
+epsilon-rf      = 61        ; dielectric medium beyond the cut-off, as in GROMOS
+vdwtype         = Cut-off
+rvdw            = 1.4
+DispCorr        = no        ; GROMOS applies no long-range dispersion correction
+
+; Temperature coupling: one group for the whole system
+tcoupl          = v-rescale
+tc-grps         = System
+tau-t           = 0.1
+ref-t           = 300
+
+; No pressure coupling in NVT
+pcoupl          = no
+
+; Initial velocities
+gen-vel         = yes
+gen-temp        = 300
+gen-seed        = -1        ; a different random seed each run
