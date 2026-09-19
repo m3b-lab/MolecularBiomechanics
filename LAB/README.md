@@ -35,13 +35,13 @@ The PDB format first (records, fixed columns, chains, occupancy and B-factor), t
 
 `03-ClassicalMD/`
 
-The full GROMACS workflow on CLN025: topology, box and solvation, ions, energy minimization, NVT and NPT equilibration, production. Includes the box-shape comparison and three production runs that differ only in temperature: 10 K, 300 K and 600 K (at constant volume). The main force field is `amber99sb-ildn` with TIP3P water; `gromos54a7` with SPC water is run as a comparison, to see how much the result depends on the force field. You complete the `setup.sh` of LAB 1, and each student's run of a different NMR model goes into a shared class dataset.
+The full GROMACS workflow on CLN025: topology, box and solvation, ions, energy minimization, NVT and NPT equilibration, and a production run at 300 K. Includes the box-shape comparison. The force field is `amber99sb-ildn` with TIP3P water. You complete the `setup.sh` of LAB 1, and each student's run of a different NMR model goes into a shared class dataset.
 
 ### LAB 4 - MD Analysis
 
 `04-Analysis/`
 
-RMSD, RMSF, radius of gyration, Ramachandran plots, end-to-end distance, hydrogen bonds and secondary structure, plus CLN025-specific observables such as the native contact fraction. Then principal component analysis, 2D free-energy surfaces, clustering of the conformational states, and the **equilibrium free-energy profile along the end-to-end distance** that LAB 6 is compared against.
+RMSD, RMSF, radius of gyration, Ramachandran plots, end-to-end distance, hydrogen bonds and secondary structure, plus CLN025-specific observables such as the native contact fraction, on your LAB 3 run. Then, on the class dataset, principal component analysis, 2D free-energy surfaces, clustering of the conformational states, and the **equilibrium free-energy profile along the end-to-end distance** that LAB 6 is compared against.
 
 ### LAB 5 - Simulated Annealing
 
@@ -55,13 +55,13 @@ Heating and cooling schedules with the GROMACS `annealing` options, and a ladder
 
 Unfolding CLN025 with the GROMACS pull code: force-extension curves, work, and free energies from many non-equilibrium pulls with Jarzynski's equality. Includes a sweep of pulling speeds to show how the result depends on the loading rate. The final step overlays the Jarzynski profile on the equilibrium profile from LAB 4: two independent routes to the same free energy.
 
-## Reference data
+## Solutions
 
-Simulation outputs (trajectories, energies, logs) are not stored in this repository. Precomputed reference datasets are downloaded inside the VM with:
+Simulation outputs (trajectories, energies, logs) are not stored in this repository. The course's own runs and results for each lab are downloaded inside the VM into that lab's `solutions/` folder:
 
 ```bash
-course-fetch <dataset>
-course-fetch --all
+course-fetch --solutions                          # every lab
+course-fetch --lab 03-ClassicalMD --solutions     # one lab
 ```
 
 This way every lab can be analysed on the same data, even if your own runs did not finish in time.
