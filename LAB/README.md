@@ -35,7 +35,7 @@ The PDB format first (records, fixed columns, chains, occupancy and B-factor), t
 
 `03-ClassicalMD/`
 
-The full GROMACS workflow on CLN025: topology, box and solvation, ions, energy minimization, NVT and NPT equilibration, production. Includes the box-shape comparison and a run matrix of folded and extended starting structures at two temperatures. The main force field is `amber99sb-ildn` with TIP3P water; `gromos54a7` with SPC water is run as a comparison, to see how much the result depends on the force field. Each student's replicas are pooled into a shared class dataset.
+The full GROMACS workflow on CLN025: topology, box and solvation, ions, energy minimization, NVT and NPT equilibration, production. Includes the box-shape comparison and three production runs that differ only in temperature: 10 K, 300 K and 600 K (at constant volume). The main force field is `amber99sb-ildn` with TIP3P water; `gromos54a7` with SPC water is run as a comparison, to see how much the result depends on the force field. You complete the `setup.sh` of LAB 1, and each student's run of a different NMR model goes into a shared class dataset.
 
 ### LAB 4 - MD Analysis
 
