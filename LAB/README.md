@@ -47,7 +47,7 @@ RMSD, RMSF, radius of gyration, Ramachandran plots, end-to-end distance, hydroge
 
 `05-SimulatedAnnealing/`
 
-Heating and cooling schedules with the GROMACS `annealing` options, and a ladder of constant-temperature runs around the melting temperature of CLN025. You will build a melting curve, fit the melting temperature and the unfolding enthalpy, compare them with experiment, and look at hysteresis and at the unfolding pathway in VMD.
+Heating and cooling schedules with the GROMACS `annealing` options, and a ladder of constant-temperature runs from 300 to 500 K. You will see the hysteresis between heating and cooling, follow the folded fraction at each temperature and compare it with the experimental melting temperature, find out why runs of a few nanoseconds measure kinetics rather than a melting curve, and follow the unfolding pathway in VMD.
 
 ### LAB 6 - Steered MD
 
