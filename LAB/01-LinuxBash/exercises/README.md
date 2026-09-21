@@ -13,7 +13,7 @@ mkdir -p ~/molbiomech/bash-exercises && cd ~/molbiomech/bash-exercises
 cp ~/molbiomech/labs/common/structures/2RVD.pdb .
 ```
 
-Each `exerciseN/` folder has a solution script and the expected output, so you can check your work. Try on your own first.
+A solution script and the expected output of every exercise come with the lab's solutions: `course-fetch --lab 01-LinuxBash --solutions` puts them in `solutions/exercises/exerciseN/`. Try on your own first.
 
 1. **Coordinates only.** From the PDB file, make a file with only the lines holding atom coordinates, dropping all comments. Keep the models separated by their `MODEL` and `ENDMDL` lines. This file is the input of the next exercises. (`grep`)
    Check: the result has 3,260 `ATOM` lines and 20 `MODEL` lines.

@@ -64,7 +64,7 @@ course-fetch --solutions                          # every lab
 course-fetch --lab 03-ClassicalMD --solutions     # one lab
 ```
 
-This way every lab can be analysed on the same data, even if your own runs did not finish in time.
+This way every lab can be analysed on the same data, even if your own runs did not finish in time. The `solutions/` folders also hold the answers to the exercises: LAB 1's scripts and expected outputs in `solutions/scripts/` and `solutions/exercises/`, and LAB 3's completed `setup.sh` in `solutions/scripts/`.
 
 ## Other folders
 
