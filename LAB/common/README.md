@@ -29,7 +29,7 @@ gmx pdb2gmx -f cln025_capped.pdb -o cln025.gro -p topol.top -i posre.itp \
             -ff amber99sb-ildn -water tip3p -ignh
 ```
 
-GROMOS, the comparison force field. When asked, choose `None` for both termini: the caps already are the ends of the chain.
+GROMOS 54A7, used only by the optional notebook `LAB/Additional_Material/gromos54a7`. When asked, choose `None` for both termini: the caps already are the ends of the chain.
 
 ```bash
 gmx pdb2gmx -f cln025_capped_gromos.pdb -o cln025.gro -p topol.top -i posre.itp \
@@ -51,7 +51,7 @@ Both give a total charge of −2 (Asp3 and Glu5).
 
 All four use a 2 fs time step with bonds to hydrogen constrained, PME electrostatics with 1.0 nm cut-offs, the v-rescale thermostat on the whole system and the C-rescale barostat. They are written for amber99sb-ildn with TIP3P water. Copy them into your working folder and change only what a lab asks you to change, usually `nsteps` and `ref-t`.
 
-`gromos54a7/` holds the same four stages for gromos54a7 with SPC water. They differ only in the non-bonded interactions, which follow the settings GROMOS was parametrized with: reaction-field electrostatics (relative permittivity 61 beyond the cut-off), 1.4 nm cut-offs and no dispersion correction (Diem & Oostenbrink, JCTC 2020, doi:10.1021/acs.jctc.0c00509; single cut-off validated by Silva et al., JCTC 2018, doi:10.1021/acs.jctc.8b00758).
+`gromos54a7/` holds the same four stages for gromos54a7 with SPC water, for that optional notebook. They differ only in the non-bonded interactions, which follow the settings GROMOS was parametrized with: reaction-field electrostatics (relative permittivity 61 beyond the cut-off), 1.4 nm cut-offs and no dispersion correction (Diem & Oostenbrink, JCTC 2020, doi:10.1021/acs.jctc.0c00509; single cut-off validated by Silva et al., JCTC 2018, doi:10.1021/acs.jctc.8b00758).
 
 ## `scripts/`
 
